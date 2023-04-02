@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
+=======
+    "",
+    "\\assets",
+    "\\images"
+  ],
+  "SelectedNode": "\\images\\LOLCapture.PNG",
+>>>>>>> e191b7788dd09664f3bbd44d603bd84d25a902fe
   "PreviewInSolutionExplorer": false
 }
