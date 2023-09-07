@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>&nbsp;Commute Newt&nbsp;</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script type="text/javascript">
+
+			var titleText = document.title;
+			
+			function titleMarquee() {
+			
+			 titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+			 document.title = titleText;
+			 setTimeout("titleMarquee()", 300);
+			 }
+			
+		</script>
+
+	</head>
+	<body class="is-preload" onload="titleMarquee()">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Adalberto Acosta</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="commuteNewt.html" class="active">Commute Newt</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Commute Newt</h1>
+							<span class="image fit"><img src="images\CommuteNewt.png" alt="" /></span>
+
+							<p>
+								<b>Language:</b> Python <br>
+								<b>Lesson:</b> I learned how useful automation and programming can be through a real-world use case <br>
+								<b>Github Link:</b> <a href="https://github.com/AdalbertoAcosta/CommuteNewt"> AdalbertoAcosta/CommuteNewt</a>
+							</p>
+
+							<p>
+								Commute Newt is a script I developed with the purpose of helping users commute to school or work efficiently. 
+								It sends the user a text message telling them what time they should leave their home in order to arrive at their destination in time.
+							</p>
+							<p>
+								This script is made up of 2 main modules. A module for web scraping commute times off of Google Maps, and another module for texting departure time to the user. 
+								For scraping, I am using Selenium to automate browser interactions like inputting addresses and extracting traffic data. The texting module uses the Python SMTP library for sending an email to a gateway. 
+								This gateway depends on service providers but can be boiled down to an email address for your phone number; where emails appear as text messages.
+
+							</p>
+							<p>
+								I wanted to develop this script for my commute to school since traffic varies a lot where I live. I am now running this program every morning with crontab (a Linux command scheduler) on my Raspberry Pi 4. 
+								This project introduced me to web scraping and also created a texting module I can use in my future projects. Moving forward there are a lot of potential improvements and changes I could make. 
+								If I decide to continue development as a mobile application, I would shift the code to an object-oriented approach. For my simple use case, I kept the code procedural but OOP would increase the abstraction of my code.			
+							</p>
+							<p>
+								If you would like to know more about this project feel free to reach out to me!
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
