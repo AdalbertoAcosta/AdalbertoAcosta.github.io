@@ -26,6 +26,9 @@
 		</script>
 
 
+</script>
+
+
 	</head>
 	<body class="is-preload" onload="titleMarquee()">
 
@@ -35,7 +38,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">About me</a></li>
-							<li><a href="#one">Projects</a></li>
+							<li><a href="#one">Experience</a></li>
+							
 							<li><a href="#two">Resume</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
@@ -53,11 +57,11 @@
 							<h1>Adalberto Acosta</h1>
 							<p> Welcome, my name is Adalberto and you have found my portfolio website! 
 								<br>
-								I also go by Alex and I'm currently a senior at Seattle Pacific University. I'm majoring in Computer Science and expect to graduate in 2024.
+								I also go by Alex and I'm currently a senior at Seattle Pacific University. I'm majoring in Computer Science and expect to graduate December, 2024.
 								I am a lover of any geeky hobby and found my passion in programming because it combines creativity and problem solving in a beautiful way. I've grown up with software
 								all my life and I'm excited to finally be able to produce it myself.
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">My Projects</a></li>
+								<li><a href="#one" class="button scrolly">My Experience</a></li>
 							</ul>
 						</div>
 					</section>
@@ -114,8 +118,32 @@
 						</section>
 					</section>
 
+					<!-- Two -->
+					<section class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Certifications</h2>
+							<br>
+							<ul class="alt">
+								<li>
+									<a href="https://aws.amazon.com/certification/certified-developer-associate/" target="_blank" ><h3>AWS Certified Developer - Associate</h3></a>
+									<blockquote>
+										<strong>Expected:</strong> December 2024 <br>
+										<strong>Company:</strong> Amazon<br>
+									</blockquote>
+								</li>
+								<li>
+									<a href="https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-AC-04+V1" target="_blank" ><h3>Getting Started with Accelerated Computing in CUDA C/C++</h3></a>
+									<blockquote>
+										<strong>Obtained:</strong> November 2024 <br> 
+										<strong>Company:</strong> NVIDIA<br>
+									</blockquote>
+								</li>
+							</ul>
+						</div>
+					</section>
+
 				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
+					<section id="two" class="wrapper style3-alt fade-up">
 						<div class="inner">
 							<h2>Resume</h2>
 							<iframe src="images/AAcosta_Resume.pdf" width="100%" height="900px">
@@ -131,7 +159,11 @@
 									<ul class="contact">
 										<li>
 											<h3>Email</h3>
-											<a href="#">A.Acosta@IEEE.org</a>
+											A.Acosta@IEEE.org
+
+											<button id="copyEmailButton" class="button small" data-tooltip="Click to copy">
+												copy
+											</button>
 										</li>
 										<li>
 											<h3>Social</h3>
@@ -178,7 +210,6 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy;</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
@@ -191,6 +222,30 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const button = document.getElementById('copyEmailButton');
+				const email = "A.Acosta@IEEE.org";
+			
+				button.addEventListener('click', function () {
+					navigator.clipboard.writeText(email)
+						.then(() => {
+							button.setAttribute('data-tooltip', 'Copied!');
+							setTimeout(() => button.setAttribute('data-tooltip', 'Click to copy'), 2000);
+						})
+						.catch(err => {
+							console.error('Failed to copy email: ', err);
+							button.setAttribute('data-tooltip', 'Error!');
+							setTimeout(() => button.setAttribute('data-tooltip', 'Click to copy'), 2000);
+						});
+				});
+			</script>
 
+
+			
+			
+			
+			
+			
+			
 	</body>
 </html>
